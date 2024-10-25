@@ -12,7 +12,7 @@ function DealsDetails() {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch('http://localhost:3001/api/v1/order/all', {
+        const response = await fetch('https://e-commerce-gclo.onrender.com/api/v1/order/all', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
