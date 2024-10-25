@@ -19,7 +19,7 @@ function EditProduct() {
     const fetchProductDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/api/v1/product/products/${productId}`
+          `https://e-commerce-gclo.onrender.com/api/v1/product/products/${productId}`
         );
         const product = response.data;
 
