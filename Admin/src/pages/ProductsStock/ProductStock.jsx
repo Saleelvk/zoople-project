@@ -15,7 +15,7 @@ function ProductStock() {
       setLoading(true); // Start loading
 
       try {
-        const response = await fetch("http://localhost:3001/api/v1/product/products");
+        const response = await fetch("https://e-commerce-gclo.onrender.com/api/v1/product/products");
 
         if (!response.ok) {
           throw new Error(`Failed to fetch products: ${response.statusText}`);
@@ -37,7 +37,7 @@ function ProductStock() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
-        const response = await fetch(`http://localhost:3001/api/v1/product/deleteProduct/${id}`, {
+        const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/product/deleteProduct/${id}`, {
           method: "DELETE",
           credentials: "include", // Include credentials if needed
         });
