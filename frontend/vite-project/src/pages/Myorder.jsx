@@ -11,7 +11,7 @@ function MyOrder() {
       setError(null);
 
       try {
-        const response = await fetch('http://localhost:3001/api/v1/order/myorders', {
+        const response = await fetch('https://e-commerce-gclo.onrender.com/api/v1/order/myorders', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
