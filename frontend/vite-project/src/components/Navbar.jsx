@@ -18,7 +18,7 @@ function Navbar() {
 
   const fetchCartProducts = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/v1/cart", {
+      const response = await fetch("https://e-commerce-gclo.onrender.com/api/v1/cart", {
         method: "GET",
         credentials: "include",
       });
@@ -50,7 +50,7 @@ function Navbar() {
   const updateCartQuantityInBackend = async (itemId, quantityChange) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:3001/api/v1/cart/`, {
+      const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/cart/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ function Navbar() {
   const removeItem = async (itemId) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/api/v1/cart/${itemId}`,
+        `https://e-commerce-gclo.onrender.com/api/v1/cart/${itemId}`,
         {
           method: "DELETE",
           credentials: "include",
