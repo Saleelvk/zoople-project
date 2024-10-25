@@ -23,7 +23,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     setIsModalOpen(false);
     try {
-      const response = await axios.post('http://localhost:3001/api/v1/auth/logout');
+      const response = await axios.post('https://e-commerce-gclo.onrender.com/api/v1/auth/logout');
       console.log(response.data.message);
       setIsLoggedIn(false); // Update the logged-in state
 
@@ -38,7 +38,7 @@ const Navbar = () => {
     navigate('/login')
     // Replace this with your login logic
     try {
-      const response = await axios.post('http://localhost:3001/api/v1/auth/login', {
+      const response = await axios.post('https://e-commerce-gclo.onrender.com/api/v1/auth/login', {
         // your login credentials
       });
       console.log(response.data.message);
