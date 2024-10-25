@@ -19,7 +19,7 @@ const CarouselComponent = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/v1/product/products`);
+        const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/product/products`);
         if (!response.ok) throw new Error("Failed to fetch products");
         const data = await response.json();
         setItems(data.products); // Assume products are in data.products
