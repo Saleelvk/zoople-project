@@ -1,0 +1,222 @@
+import image from "../assets/image/communication/outline/elegant-smartphone-composition-removebg-preview.png";
+import imagelap from "../assets/image/bg-remove-image/laptop-isolated-white-background-with-clipping-path-3d-illustration.png";
+import imagelap2 from "../assets/image/bg-remove-image/laptop-white-background-3d-rendering-computer-generated-image.png";
+import imagePhone from "../assets/image/bg-remove-image/realistic-design-green-smartphone-with-three-cameras.png";
+import imagePhone2 from "../assets/image/bg-remove-image/realistic-style-new-smartphone-model.png";
+import imageWatch from "../assets/image/bg-remove-image/rendering-smart-home-device.png";
+import imagePhone4 from "../assets/image/bg-remove-image/smartphone-with-screensaver-wallpaper-with-winter-mountain-landscape-hiker.png";
+import star from "../assets/image/communication/outline/Rating Group.jpg";
+import type1 from "../assets/image/diff angles/elegant-smartphone-composition (1).jpg";
+import type2 from "../assets/image/diff angles/elegant-smartphone-composition (2).jpg";
+import type3 from "../assets/image/diff angles/elegant-smartphone-composition.jpg";
+
+export const productsCardItems = [
+  {
+    _id: "aaaaa",
+    name: "Women ",
+    description: `Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming`,
+    price: 100,
+    image: [image, type1, type2, type3],
+    category: "MOBILES",
+    color:'Yellow',
+    star: [star],
+    quantity:1,
+    date: 1716634345448,
+    bestseller: true,
+  },
+  {
+    _id: "aaaab",
+    name: "Men Round",
+    description:
+      "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+    price: 200,
+    color:'Yellow',
+    image: [imagelap],
+    category: "LapTop",
+    quantity:1,
+    star: [star],
+    date: 1716621345448,
+    bestseller: true,
+  },
+  {
+    _id: "aaaac",
+    name: "Girls Round ",
+    description:
+      "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+    price: 220,
+    image: [imagelap],
+    quantity:1,
+    category: "LAPTOPS",
+    color:'Yellow',
+    star: [star],
+    date: 1716234545448,
+    bestseller: true,
+  },
+  {
+    _id: "aaaad",
+    name: "Men Round",
+    description:
+      "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming.",
+    price: 110,
+    image: [imagePhone],
+    category: "MOBILES",
+    color:'Yellow',
+    quantity:1,
+    star: [star],
+    date: 1716621345448,
+    bestseller: true,
+  },
+  {
+    _id: "aaaae",
+    name: "WomenRound ",
+    description:
+      "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+    price: 130,
+    image: [imagePhone2],
+    quantity:1,
+    category: "MOBILES",
+    date: 1716622345448,
+    color:'Yellow',
+    star: [star],
+    bestseller: true,
+  },
+  // {
+  //   _id: "aaaaf",
+  //   name: "Girls Round",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 140,
+  //   quantity:1,
+  //   image: [imageWatch],
+  //   category: "GADGETS",
+  //   color:'Yellow',
+  //   date: 1716623423448,
+  //   star: [star],
+  //   bestseller: true,
+  // },
+  // {
+  //   _id: "aaaag",
+  //   name: "Men",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 190,
+  //   image: [imagePhone4],
+  //   category: "MOBILES",
+  //   color:'Yellow',
+  //   date: 1716621542448,
+  //   star: [star],
+  //   quantity:1,
+  //   bestseller: false,
+  // },
+  // {
+  //   _id: "aaaah",
+  //   name: "Men ",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 140,
+  //   image: [image],
+  //   category: "MOBILES",
+  //   color:'Yellow', 
+  //   quantity:1,
+  //   date: 1716622345448,
+  //   star: [star],
+  //   bestseller: false,
+  // },
+  // {
+  //   _id: "aaaai",
+  //   name: "Girls",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 100,
+  //   image: [imagelap],
+  //   category: "LAPTOPS",
+  //   quantity:1,
+  //   color:'Yellow',
+  //   date: 1716621235448,
+  //   star: [star],
+  //   bestseller: false,
+  // },
+  // {
+  //   _id: "aaaaj",
+  //   name: "Men ",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 110,
+  //   image: [imagelap2],
+  //   category: "LAPTOPS",
+  //   quantity:1,
+  //   date: 1716622235448,
+  //   star: [star],
+  //   bestseller: false,
+  // },
+  // {
+  //   _id: "aaaak",
+  //   name: "Ment",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 120,
+  //   image: [imagePhone],
+  //   category: "MOBILES",
+  //   quantity:1,
+  //   color:'Yellow',
+  //   date: 1716623345448,
+  //   star: [star],
+  //   bestseller: false,
+  // },
+  // {
+  //   _id: "aaaal",
+  //   name: "Men",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 150,
+  //   image: [imagePhone2],
+  //   category: "MOBILES",
+  //   color:'Yellow',
+  //   quantity:1,
+  //   date: 1716624445448,
+  //   star: [star],
+  //   bestseller: false,
+  // },
+  // {
+  //   _id: "aaaam",
+  //   name: "Women",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 130,
+  //   image: [imageWatch],
+  //   category: "GADGETS",
+  //   subCategory: "Topwear",
+  //   quantity:1,
+  //   color:'Yellow',
+  //   star: [star],
+  //   bestseller: false,
+  // },
+  // {
+  //   _id: "aaaan",
+  //   name: "BoyRound",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 160,
+  //   image: [imagePhone4],
+  //   quantity:1,
+  //   category: "MOBILES",
+  //   date: 1716626645448,
+  //   color:'Yellow',
+  //   star: [star],
+  //   bestseller: false,
+  // },
+  // {
+  //   _id: "aaaao",
+  //   name: "MenTapered ",
+  //   description:
+  //     "Unlock new possibilities with the, designed to bring innovation and efficiency to your fingertips. Whether you're working, gaming",
+  //   price: 140,
+  //   quantity:1,
+  //   image: [imagelap2],
+  //   category: "LAPTOPS",
+  //   date: 1716627745448,
+  //   star: [star],
+  //   color:'Yellow',
+  //   bestseller: false,
+  // },
+];
