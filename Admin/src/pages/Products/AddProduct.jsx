@@ -50,7 +50,7 @@ function AddProduct() {
     // Make the API call
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/v1/product/addProduct/",
+        "https://e-commerce-gclo.onrender.com/api/v1/product/addProduct/",
         formData,
         {
           headers: {
