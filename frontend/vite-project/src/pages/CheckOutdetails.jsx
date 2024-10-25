@@ -89,7 +89,7 @@ function CheckOutDetails() {
    const updateCartQuantityInBackend = async (itemId, quantityChange) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:3001/api/v1/cart/`, {
+      const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/cart/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
