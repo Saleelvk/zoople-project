@@ -14,7 +14,7 @@ console.log(products)
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:3001/api/v1/product/products");
+        const response = await fetch("https://e-commerce-gclo.onrender.com/api/v1/product/products");
         const data = await response.json(); // Parse the JSON response directly
         console.log("Fetched products:", data);
     
