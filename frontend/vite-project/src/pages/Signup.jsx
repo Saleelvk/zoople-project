@@ -37,7 +37,7 @@ function Signup() {
 
     try {
 
-      const response =await fetch('http://localhost:3001/api/v1/auth/register',{
+      const response =await fetch('https://e-commerce-gclo.onrender.com/api/v1/auth/register',{
 
         method:"POST",
         headers:{
