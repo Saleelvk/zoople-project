@@ -14,7 +14,7 @@ function Product() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/v1/product/products/${productId}`);
+        const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/product/products/${productId}`);
         console.log("Response received:", response);
     
         if (!response.ok) {
