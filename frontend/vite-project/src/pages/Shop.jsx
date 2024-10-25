@@ -18,7 +18,7 @@ function Shop() {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:3001/api/v1/product/products/");
+        const response = await fetch("https://e-commerce-gclo.onrender.com/api/v1/product/products/");
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
