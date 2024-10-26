@@ -16,7 +16,7 @@ function Products() {
       setError(null); // Reset error state before fetching
       try {
         const response = await fetch(
-          "http://localhost:3001/api/v1/product/products/"
+          "https://e-commerce-gclo.onrender.com/api/v1/product/products/"
         );
 
         // Log the response status to see if there is an issue
