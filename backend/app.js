@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 
 const allowedOrigins = [
-  'https://e-commerce-gclo.onrender.com', // Your Vite app
+  'https://zoople-project-frontend.onrender.com', // Your Vite app
   'http://localhost:5173',     // Another allowed origin
   // Add more origins as needed
 ];
