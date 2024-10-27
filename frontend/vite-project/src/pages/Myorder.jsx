@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
+import { ShopContext } from "../components/ShopContext";
 
 function MyOrder() {
   const [userOrders, setUserOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const {url}=useContext(ShopContext)
 
   useEffect(() => {
     const fetchUserOrders = async () => {
@@ -11,7 +13,7 @@ function MyOrder() {
       setError(null);
 
       try {
-        const response = await fetch('https://e-commerce-gclo.onrender.com/api/v1/order/myorders', {
+        const response = await fetch(`${url}/api/v1/order/myorders`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
