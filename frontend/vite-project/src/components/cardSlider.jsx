@@ -4,7 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { ShopContext } from './ShopContext';
 
 const CarouselComponent = () => {
-  const { addToCart } = useContext(ShopContext);
+  const { addToCart,url } = useContext(ShopContext);
   const [items, setItems] = useState([]); // Holds the fetched products
 
   // Define responsive breakpoints
@@ -19,7 +19,7 @@ const CarouselComponent = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/product/products`);
+        const response = await fetch(`${url}/api/v1/product/products`);
         if (!response.ok) throw new Error("Failed to fetch products");
         const data = await response.json();
         setItems(data.products); // Assume products are in data.products
