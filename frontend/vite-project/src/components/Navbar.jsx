@@ -11,14 +11,14 @@ function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false); // State for sidebar
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State for login status
   const location = useLocation();
-  const { currency, cartItems, setCartItems, } = useContext(ShopContext);
+  const { currency, cartItems, setCartItems,url } = useContext(ShopContext);
 
   const [showDiscount, setShowDiscount] = useState(true);
   const navigate = useNavigate();
 
   const fetchCartProducts = async () => {
     try {
-      const response = await fetch("https://e-commerce-gclo.onrender.com/api/v1/cart", {
+      const response = await fetch(`${url}/api/v1/cart`, {
         method: "GET",
         credentials: "include",
       });
@@ -50,7 +50,7 @@ function Navbar() {
   const updateCartQuantityInBackend = async (itemId, quantityChange) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/cart/`, {
+      const response = await fetch(`${url}/api/v1/cart/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ function Navbar() {
   const removeItem = async (itemId) => {
     try {
       const response = await fetch(
-        `https://e-commerce-gclo.onrender.com/api/v1/cart/${itemId}`,
+        `${url}/api/v1/cart/${itemId}`,
         {
           method: "DELETE",
           credentials: "include",
