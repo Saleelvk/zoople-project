@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import LoginImage from "../assets/image/bg-remove-image/computer-monitor.png";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
-
+import { ShopContext } from "../components/ShopContext";
 function Login() {
+   const {url}=useContext(ShopContext)
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
+    password: "",  
   });
 
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -24,7 +25,7 @@ function Login() {
     console.log("Submitting form with data:", formData);
 
     try {
-        const response = await fetch("https://e-commerce-gclo.onrender.com/api/v1/auth/login", {
+        const response = await fetch(`${url}/api/v1/auth/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
