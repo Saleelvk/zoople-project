@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 
 const allowedOrigins = [
-  'http://localhost:5174', // Your Vite app
+  'https://e-commerce-gclo.onrender.com', // Your Vite app
   'http://localhost:5173',     // Another allowed origin
   // Add more origins as needed
 ];
