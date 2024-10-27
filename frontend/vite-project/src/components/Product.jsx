@@ -6,7 +6,7 @@ import RelatedProduct from "./RelatedProduct";
 
 function Product() {
   const { productId } = useParams();
-  const { currency, addToCart } = useContext(ShopContext);
+  const { currency, addToCart,url } = useContext(ShopContext);
   const [productData, setProductData] = useState(null); 
   const [image, setImage] = useState("");
 
@@ -14,7 +14,7 @@ function Product() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/product/products/${productId}`);
+        const response = await fetch(`${url}/api/v1/product/products/${productId}`);
         console.log("Response received:", response);
     
         if (!response.ok) {
