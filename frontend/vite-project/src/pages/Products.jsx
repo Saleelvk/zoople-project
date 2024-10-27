@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import ProductsItems from "../components/productsItems";
+import { ShopContext } from "../components/ShopContext";
 
 function Products() {
   const [productsCardItems, setProductsCardItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  
+  const {url}=useContext(ShopContext)
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,7 +18,7 @@ function Products() {
       setError(null); // Reset error state before fetching
       try {
         const response = await fetch(
-          "https://e-commerce-gclo.onrender.com/api/v1/product/products/"
+          `${url}/api/v1/product/products/"
         );
 
         // Log the response status to see if there is an issue
