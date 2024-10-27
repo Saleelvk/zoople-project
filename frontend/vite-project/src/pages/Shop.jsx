@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 
 import ProductsItems from "../components/productsItems";
 import EmailSend from "../components/emailSend";
+import { ShopContext } from "../components/ShopContext";
 
 function Shop() {
-
+  const {url}=useContext(ShopContext)
   const [productsCardItems, setProductsCardItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,7 +19,7 @@ function Shop() {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://e-commerce-gclo.onrender.com/api/v1/product/products/");
+        const response = await fetch(`${url}/api/v1/product/products/");
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
