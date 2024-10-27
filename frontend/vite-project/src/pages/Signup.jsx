@@ -1,9 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState,useContext } from "react";
 import LoginImage from "../assets/image/bg-remove-image/computer-monitor.png";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import { ShopContext } from "../components/ShopContext";
+
 function Signup() {
+  const {url}=useContext(ShopContext)
+
   const nameInputRef = useRef(null);
   const [formData,setFormData]=useState({
 
@@ -37,7 +41,7 @@ function Signup() {
 
     try {
 
-      const response =await fetch('https://e-commerce-gclo.onrender.com/api/v1/auth/register',{
+      const response =await fetch(`${url}/api/v1/auth/register',{
 
         method:"POST",
         headers:{
