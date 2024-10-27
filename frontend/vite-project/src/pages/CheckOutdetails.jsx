@@ -4,7 +4,7 @@ import { ShopContext } from "../components/ShopContext";
 import { useNavigate } from "react-router-dom";
 
 function CheckOutDetails() {
-  const { cartItems, setCartItems, currency } = useContext(ShopContext);
+  const { cartItems, setCartItems, currency,url } = useContext(ShopContext);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -56,7 +56,7 @@ function CheckOutDetails() {
       const token = localStorage.getItem('token');
   
       // Send the request using the fetch API
-      const response = await fetch("https://e-commerce-gclo.onrender.com/api/v1/order/", {
+      const response = await fetch(`${url}/api/v1/order/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -89,7 +89,7 @@ function CheckOutDetails() {
    const updateCartQuantityInBackend = async (itemId, quantityChange) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://e-commerce-gclo.onrender.com/api/v1/cart/`, {
+      const response = await fetch(`${url}/api/v1/cart/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
